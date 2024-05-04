@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biraj's</title>
+
+    <link rel="stylesheet" href="/styles.css" />
+
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #socials a {
+        margin: 0 8px;
+        text-decoration: none;
+      }
+      #socials img {
+        height: 32px;
+      }
+
+      #projects .project {
+        text-align: left;
+      }
+      #projects .project h3 {
+        margin-bottom: 0;
+      }
+      #projects .project p {
+        margin-top: 8px;
+      }
+      #projects .project .project__source-code {
+        display: inline-block;
+        margin-top: 2px;
+      }
+
+      #blogs ul {
+        text-align: left;
+      }
+
+      span.separator-bar {
+        margin: 0 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>welcome to Biraj's</h1>
+    <p>
+      i'm an average competent software developer. i am a chess amateur (roughly 1700 on
+      <a href="https://www.chess.com/member/biraj21">chess.com</a>) and i like reading Sherlock
+      Holmes.
+    </p>
+    <section id="socials">
+      <a href="https://github.com/biraj21" target="_blank">
+        <img src="/images/icons/github.svg" alt="GitHub" />
+      </a>
+      <a href="https://twitter.com/not_salgaonkar" target="_blank">
+        <img src="/images/icons/twitter.svg" alt="Twitter" />
+      </a>
+      <a href="https://www.chess.com/member/biraj21" target="_blank">
+        <img src="/images/icons/chesscom.svg" alt="Chess.com" />
+      </a>
+      <a href="https://lichess.org/@/biraj21" target="_blank">
+        <img src="/images/icons/lichess.svg" alt="Lichess" />
+      </a>
+      <a href="https://www.linkedin.com/in/biraj21/" target="_blank">
+        <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+      </a>
+    </section>
+
+    <hr />
+
+    <section id="projects">
+      <h2>projects</h2>
+      <div class="project">
+        <h3>web wanderer</h3>
+        <p>
+          web wanderer is a multi-threaded web crawler written in Python. it uses
+          <code>concurrent.futures.ThreadPoolExecutor</code> and
+          <a href="https://playwright.dev/">Playwright</a> to crawl and download web pages. it
+          handles dynamically rendered websites, making it capable of extracting content from modern
+          web applications.
+          <br />
+          <a class="project__source-code" href="https://github.com/biraj21/web-wanderer"
+            >source code</a
+          >
+        </p>
+      </div>
+      <div class="project">
+        <h3>JSON parser</h3>
+        <p>
+          a JSON parser written in Go from scratch. it prints error message with line and column
+          number. <a href="https://github.com/eatonphil">Phil Eaton</a>'s
+          <a href="https://notes.eatonphil.com/writing-a-simple-json-parser.html">blog post</a>
+          helped me write the lexer and parser. it was fun.
+          <br />
+          <a class="project__source-code" href="https://github.com/biraj21/json-parser"
+            >source code</a
+          >
+        </p>
+      </div>
+      <div class="project">
+        <h3>texterm</h3>
+        <p>
+          it is a very minimal, nano-like text editor written in C from scratch, using only the
+          standard library. i followed
+          <a href="https://viewsourcecode.org/snaptoken/kilo/">Build Your Own Text Editor</a>
+          tutorial. i learnt a lot about C and linux terminals while implementing this.
+          <br />
+          <a class="project__source-code" href="https://github.com/biraj21/texterm">source code</a>
+        </p>
+      </div>
+      <div class="project">
+        <h3>array (or tensor) visualizer</h3>
+        <p>
+          it's a simple tool that helps you visualize multi-dimensional arrays. it uses HTML canvas
+          for rendering the image. i wrote this when i was trying to understand neural networks.
+          <br />
+          <a class="project__source-code" href="https://github.com/biraj21/array-visualizer"
+            >source code</a
+          >
+          <span class="separator-bar">|</span>
+          <a href="https://arrayvis.netlify.app/">try it</a>
+        </p>
+      </div>
+      <div class="project">
+        <h3>findREp</h3>
+        <p>
+          a simple GUI tool written with Tkinter in Python to find and replace all the matches of a
+          regular expression in files. you can either select the files directly or select a folder,
+          in which case it will recursively look for matches in files inside the subfolders. i wrote
+          this because i wasn't aware of VS Code's search functionality at the time.
+          <br />
+          <a class="project__source-code" href="https://github.com/biraj21/findrep">source code</a>
+        </p>
+      </div>
+      <div class="project">
+        <h3>brainfuck interpreter</h3>
+        <p>
+          a <a href="https://en.wikipedia.org/wiki/Brainfuck">Brainfuck</a> interpreter written in
+          C. it can also transpile Brainfuck programs to C. this interpreter takes about 45 seconds
+          to run <a href="https://github.com/erikdubbelboer">Erik Dubbelboer</a>'s
+          <a href="https://github.com/erikdubbelboer/brainfuck-jit/blob/master/mandelbrot.bf"
+            >Mandelbrot program</a
+          >.
+          <br />
+          <a class="project__source-code" href="https://github.com/biraj21/findrep">source code</a>
+        </p>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="blogs">
+      <h2>blogs</h2>
+
+      <ul>
+        <li>
+          <a href="https://dev.to/biraj21/introduction-to-numpy-31md">Introduction to NumPy</a>
+        </li>
+        <li>
+          <a href="https://dev.to/biraj21/javascript-array-methods-understand-by-implementing-54g3"
+            >Understand JavaScript Array Methods By Implementing Them</a
+          >
+        </li>
+        <li>
+          <a href="https://biraj21.medium.com/what-are-pointers-in-c-d21efd5e41dc"
+            >What are Pointers in C? (shallow explanation)</a
+          >
+        </li>
+        <li>
+          <a href="https://biraj21.medium.com/what-are-radians-657a3e6ea913">What are Radians?</a>
+        </li>
+        <li>
+          <a href="https://biraj21.medium.com/what-are-number-systems-2cd7a5df9220"
+            >What are number systems?</a
+          >
+        </li>
+        <li>
+          <a href="https://biraj21.medium.com/what-is-speed-d866c91d24cc">What is speed?</a>
+        </li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <footer>
+      <a href="mailto:biraj.pub@gmail.com">biraj.pub@gmail.com</a>
+      <p>no copyright. feel free to copy this stunning website.</p>
+    </footer>
+  </body>
+</html>
