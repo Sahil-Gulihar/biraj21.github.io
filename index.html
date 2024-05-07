@@ -26,6 +26,19 @@
         height: 32px;
       }
 
+      #work-experience ul {
+        text-align: left;
+      }
+      #work-experience .work h3,
+      #work-experience .work h4 {
+        display: flex;
+        justify-content: space-between;
+      }
+      #work-experience .work details ul {
+        margin-top: 8px;
+        margin-left: 16px;
+      }
+
       #projects .project {
         text-align: left;
       }
@@ -59,8 +72,7 @@
     <h1>welcome to Biraj's</h1>
     <p>
       i'm an average competent software developer. i am a chess amateur (roughly 1700 on
-      <a href="https://www.chess.com/member/biraj21" target="_blank">chess.com</a>) and i like
-      reading Sherlock Holmes.
+      <a href="https://www.chess.com/member/biraj21" target="_blank">chess.com</a>) and i like reading Sherlock Holmes.
     </p>
     <section id="socials">
       <a href="https://github.com/biraj21" target="_blank">
@@ -82,6 +94,97 @@
 
     <hr />
 
+    <section id="work-experience">
+      <h2>work experience</h2>
+
+      <ul>
+        <li class="work">
+          <h3>
+            <span>LaneSquare Technology Pvt. Ltd.</span>
+            <small>
+              <time datetime="2023-02-20">feb 2023</time>
+              -
+              <span>present</span>
+            </small>
+          </h3>
+          <ul>
+            <li>
+              <h4>
+                software developer
+                <small>
+                  <time datetime="2023-09-01">sept 2023</time>
+                </small>
+              </h4>
+
+              <details>
+                <summary>
+                  engineering <a href="https://thinkstack.ai" target="_blank">thinkstack.ai</a>, a platform where
+                  businesses can create customer support chatbots.
+                </summary>
+                <ul>
+                  <li>
+                    developed backend services for ThinkstackAI - GraphQL with Node.js, REST APIs with Flask (Python),
+                    Redis for caching and S3 for file management.
+                  </li>
+                  <li>
+                    implemented Retrieval Augmented Generation (RAG) for LLM in Thinkstack: chunking user data,
+                    generating embeddings, and storing them in Pinecone (and later querying them with similarity search
+                    of course).
+                  </li>
+                  <li>
+                    developed Thinkstack's frontend (<a href="https://app.thinkstack.ai/login">app.thinkstack.ai</a>) in
+                    React.js and Tailwind CSS, while optimizing for performance through the use of memoization and
+                    debouncing.
+                  </li>
+                  <li>
+                    created Zapier, Slack and WhatsApp integrations for Thinkstack. also built its API key management
+                    system for authentication.
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <h4>
+                software developer intern
+                <small>
+                  <time datetime="2023-02-20">feb 2023</time>
+                  -
+                  <time datetime="2023-08-31">aug 2023</time>
+                </small>
+              </h4>
+              <details>
+                <summary>
+                  migrated <a href="https://www.pickcel.com/">Pickcel</a>'s backend codebase from node 12 & node 18.
+                  also learnt Docker.
+                </summary>
+                <ul>
+                  <li>
+                    worked with TypeScript, Node.js, and Mongoose based codebase to update and optimize existing REST
+                    APIs, creating new ones, and overall improving the code quality.
+                  </li>
+                  <li>
+                    optimized Dockerfile for our on-premise setup by properly reordering layers, reducing consecutive
+                    build times and improving cache utilization. also added redis to the stack.
+                  </li>
+                  <li>set up integration testing from scratch using Jest, SuperTest and GitHub Actions.</li>
+                  <li>
+                    built a custom Ubuntu 20.04 ISO featuring automated installation and Docker setup, facilitating
+                    swift deployment of containers on system startup.
+                  </li>
+                  <li>
+                    introduced semantic git commits, coding conventions, and structure, which is now embraced by all
+                    developers in the organization.
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <hr />
+
     <section id="projects">
       <h2>projects</h2>
       <div class="project">
@@ -92,16 +195,10 @@
         <p>
           web wanderer is a multi-threaded web crawler written in Python. it uses
           <code>concurrent.futures.ThreadPoolExecutor</code> and
-          <a href="https://playwright.dev/" target="_blank">Playwright</a> to crawl and download web
-          pages. it handles dynamically rendered websites, making it capable of extracting content
-          from modern web applications.
+          <a href="https://playwright.dev/" target="_blank">Playwright</a> to crawl and download web pages. it handles
+          dynamically rendered websites, making it capable of extracting content from modern web applications.
           <br />
-          <a
-            class="project__source-code"
-            href="https://github.com/biraj21/web-wanderer"
-            target="_blank"
-            >source code</a
-          >
+          <a class="project__source-code" href="https://github.com/biraj21/web-wanderer" target="_blank">source code</a>
         </p>
       </div>
       <div class="project">
@@ -110,19 +207,12 @@
           <img src="/images/icons/go.svg" alt="Go" />
         </h3>
         <p>
-          a JSON parser written in Go from scratch. it prints error message with line and column
-          number. <a href="https://github.com/eatonphil" target="_blank">Phil Eaton</a>'s
-          <a href="https://notes.eatonphil.com/writing-a-simple-json-parser.html" target="_blank"
-            >blog post</a
-          >
+          a JSON parser written in Go from scratch. it prints error message with line and column number.
+          <a href="https://github.com/eatonphil" target="_blank">Phil Eaton</a>'s
+          <a href="https://notes.eatonphil.com/writing-a-simple-json-parser.html" target="_blank">blog post</a>
           helped me write the lexer and parser. it was fun.
           <br />
-          <a
-            class="project__source-code"
-            href="https://github.com/biraj21/json-parser"
-            target="_blank"
-            >source code</a
-          >
+          <a class="project__source-code" href="https://github.com/biraj21/json-parser" target="_blank">source code</a>
         </p>
       </div>
       <div class="project">
@@ -131,16 +221,12 @@
           <img src="/images/icons/c.svg" alt="C" />
         </h3>
         <p>
-          it is a very minimal, nano-like text editor written in C from scratch, using only the
-          standard library. i followed
-          <a href="https://viewsourcecode.org/snaptoken/kilo/" target="_blank"
-            >Build Your Own Text Editor</a
-          >
+          it is a very minimal, nano-like text editor written in C from scratch, using only the standard library. i
+          followed
+          <a href="https://viewsourcecode.org/snaptoken/kilo/" target="_blank">Build Your Own Text Editor</a>
           tutorial. i learnt a lot about C and linux terminals while implementing this.
           <br />
-          <a class="project__source-code" href="https://github.com/biraj21/texterm" target="_blank"
-            >source code</a
-          >
+          <a class="project__source-code" href="https://github.com/biraj21/texterm" target="_blank">source code</a>
         </p>
       </div>
       <div class="project">
@@ -149,13 +235,10 @@
           <img src="/images/icons/javascript.svg" alt="JavaScript" />
         </h3>
         <p>
-          it's a simple tool that helps you visualize multi-dimensional arrays. it uses HTML canvas
-          for rendering the image. i wrote this when i was trying to understand neural networks.
+          it's a simple tool that helps you visualize multi-dimensional arrays. it uses HTML canvas for rendering the
+          image. i wrote this when i was trying to understand neural networks.
           <br />
-          <a
-            class="project__source-code"
-            href="https://github.com/biraj21/array-visualizer"
-            target="_blank"
+          <a class="project__source-code" href="https://github.com/biraj21/array-visualizer" target="_blank"
             >source code</a
           >
           <span class="separator-bar">|</span>
@@ -168,14 +251,12 @@
           <img src="/images/icons/python.svg" alt="Python" />
         </h3>
         <p>
-          a simple GUI tool written with Tkinter in Python to find and replace all the matches of a
-          regular expression in files. you can either select the files directly or select a folder,
-          in which case it will recursively look for matches in files inside the subfolders. i wrote
-          this because i wasn't aware of VS Code's search functionality at the time.
+          a simple GUI tool written with Tkinter in Python to find and replace all the matches of a regular expression
+          in files. you can either select the files directly or select a folder, in which case it will recursively look
+          for matches in files inside the subfolders. i wrote this because i wasn't aware of VS Code's search
+          functionality at the time.
           <br />
-          <a class="project__source-code" href="https://github.com/biraj21/findrep" target="_blank"
-            >source code</a
-          >
+          <a class="project__source-code" href="https://github.com/biraj21/findrep" target="_blank">source code</a>
         </p>
       </div>
       <div class="project">
@@ -186,12 +267,10 @@
         <p>
           a
           <a href="https://en.wikipedia.org/wiki/Brainfuck" target="_blank">Brainfuck</a>
-          interpreter written in C. it can also transpile Brainfuck programs to C. this interpreter
-          takes about 45 seconds to run
+          interpreter written in C. it can also transpile Brainfuck programs to C. this interpreter takes about 45
+          seconds to run
           <a href="https://github.com/erikdubbelboer" target="_blank">Erik Dubbelboer</a>'s
-          <a
-            href="https://github.com/erikdubbelboer/brainfuck-jit/blob/master/mandelbrot.bf"
-            target="_blank"
+          <a href="https://github.com/erikdubbelboer/brainfuck-jit/blob/master/mandelbrot.bf" target="_blank"
             >Mandelbrot program</a
           >.
           <br />
@@ -209,14 +288,10 @@
 
       <ul>
         <li>
-          <a href="https://dev.to/biraj21/introduction-to-numpy-31md" target="_blank"
-            >Introduction to NumPy</a
-          >
+          <a href="https://dev.to/biraj21/introduction-to-numpy-31md" target="_blank">Introduction to NumPy</a>
         </li>
         <li>
-          <a
-            href="https://dev.to/biraj21/javascript-array-methods-understand-by-implementing-54g3"
-            target="_blank"
+          <a href="https://dev.to/biraj21/javascript-array-methods-understand-by-implementing-54g3" target="_blank"
             >Understand JavaScript Array Methods By Implementing Them</a
           >
         </li>
@@ -226,9 +301,7 @@
           >
         </li>
         <li>
-          <a href="https://biraj21.medium.com/what-are-radians-657a3e6ea913" target="_blank"
-            >What are Radians?</a
-          >
+          <a href="https://biraj21.medium.com/what-are-radians-657a3e6ea913" target="_blank">What are Radians?</a>
         </li>
         <li>
           <a href="https://biraj21.medium.com/what-are-number-systems-2cd7a5df9220" target="_blank"
@@ -236,9 +309,7 @@
           >
         </li>
         <li>
-          <a href="https://biraj21.medium.com/what-is-speed-d866c91d24cc" target="_blank"
-            >What is speed?</a
-          >
+          <a href="https://biraj21.medium.com/what-is-speed-d866c91d24cc" target="_blank">What is speed?</a>
         </li>
       </ul>
     </section>
