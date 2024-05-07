@@ -22,7 +22,7 @@
         margin: 0 8px;
         text-decoration: none;
       }
-      #socials img {
+      #socials a img {
         height: 32px;
       }
 
@@ -66,29 +66,50 @@
       span.separator-bar {
         margin: 0 4px;
       }
+
+      @media print {
+        #socials a {
+          display: inline-flex;
+          align-items: center;
+        }
+        #socials a img {
+          height: 16px;
+          margin-right: 4px;
+        }
+      }
     </style>
   </head>
   <body>
+    <small class="print-only">
+      please note this is the print version of my website <a href="https://biraj21.github.io">biraj21.github.io</a>.
+    </small>
+
     <h1>welcome to Biraj's</h1>
     <p>
       i'm an average competent software developer. i am a chess amateur (roughly 1700 on
       <a href="https://www.chess.com/member/biraj21" target="_blank">chess.com</a>) and i like reading Sherlock Holmes.
     </p>
+
     <section id="socials">
       <a href="https://github.com/biraj21" target="_blank">
         <img src="/images/icons/github.svg" alt="GitHub" />
+        <span class="print-only">github.com/biraj21</span>
       </a>
       <a href="https://twitter.com/not_salgaonkar" target="_blank">
         <img src="/images/icons/twitter.svg" alt="Twitter" />
+        <span class="print-only">twitter.com/not_salgaonkar</span>
       </a>
       <a href="https://www.chess.com/member/biraj21" target="_blank">
         <img src="/images/icons/chesscom.svg" alt="Chess.com" />
+        <span class="print-only">chess.com/member/biraj21</span>
       </a>
       <a href="https://lichess.org/@/biraj21" target="_blank">
         <img src="/images/icons/lichess.svg" alt="Lichess" />
+        <span class="print-only">lichess.org/@/biraj21</span>
       </a>
       <a href="https://www.linkedin.com/in/biraj21/" target="_blank">
         <img src="/images/icons/linkedin.svg" alt="LinkedIn" />
+        <span class="print-only">linkedin.com/in/biraj21</span>
       </a>
     </section>
 
@@ -96,6 +117,7 @@
 
     <section id="work-experience">
       <h2>work experience</h2>
+      <small class="no-print">(you can click on the role summary to see the details)</small>
 
       <ul>
         <li class="work">
@@ -132,8 +154,9 @@
                     of course).
                   </li>
                   <li>
-                    developed Thinkstack's frontend (<a href="https://app.thinkstack.ai/login">app.thinkstack.ai</a>) in
-                    React.js and Tailwind CSS, while optimizing for performance through the use of memoization and
+                    developed Thinkstack's frontend (<a href="https://app.thinkstack.ai/login" target="_blank"
+                      >app.thinkstack.ai</a
+                    >) in React.js and Tailwind CSS, while optimizing for performance through the use of memoization and
                     debouncing.
                   </li>
                   <li>
@@ -324,5 +347,12 @@
         <a href="https://biraj21.netlify.app" target="_blank">biraj21.netlify.app</a>.
       </p>
     </footer>
+
+    <script>
+      // open all details elements before opening print dialog to ensure that all content is printed
+      window.addEventListener("beforeprint", () => {
+        document.querySelectorAll("details").forEach(($details) => $details.setAttribute("open", "open"));
+      });
+    </script>
   </body>
 </html>

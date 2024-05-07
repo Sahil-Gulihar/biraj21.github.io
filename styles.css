@@ -29,3 +29,17 @@ code {
 hr {
   margin: 24px 0;
 }
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  .print-only {
+    display: block;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
