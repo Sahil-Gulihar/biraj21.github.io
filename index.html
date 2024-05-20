@@ -84,11 +84,17 @@
       please note this is the print version of my website <a href="https://biraj21.github.io">biraj21.github.io</a>.
     </small>
 
-    <h1>welcome to Biraj's</h1>
-    <p>
+    <h1 class="no-print">welcome to Biraj's</h1>
+    <p class="no-print">
       i'm an average competent software developer. i am a chess amateur (roughly 1700 on
       <a href="https://www.chess.com/member/biraj21" target="_blank">chess.com</a>) and i like reading Sherlock Holmes.
     </p>
+
+    <h1 class="print-only">Biraj Patel</h1>
+    <p style="margin-top: -8px">
+      <a href="mailto:biraj.pub@gmail.com" class="print-only">biraj.pub@gmail.com</a>
+    </p>
+    <!-- <p class="print-only">biraj.pub@gmail.com</p> -->
 
     <section id="socials">
       <a href="https://github.com/biraj21" target="_blank">
@@ -177,7 +183,7 @@
               </h4>
               <details>
                 <summary>
-                  migrated <a href="https://www.pickcel.com/">Pickcel</a>'s backend codebase from node 12 & node 18.
+                  migrated <a href="https://www.pickcel.com/">Pickcel</a>'s backend codebase from node 12 to node 18.
                   also learnt Docker.
                 </summary>
                 <ul>
@@ -222,6 +228,19 @@
           dynamically rendered websites, making it capable of extracting content from modern web applications.
           <br />
           <a class="project__source-code" href="https://github.com/biraj21/web-wanderer" target="_blank">source code</a>
+        </p>
+      </div>
+      <div class="project">
+        <h3>
+          TCP Server
+          <img src="/images/icons/c.svg" alt="C" />
+        </h3>
+        <p>
+          a single-threaded TCP server written in C with an event loop using the <code>poll()</code> system call,
+          without any third-party library. the server listens on a port and echoes back received data. i've also written
+          a simple client to test the server.
+          <br />
+          <a class="project__source-code" href="https://github.com/biraj21/tcp-server" target="_blank">source code</a>
         </p>
       </div>
       <div class="project">
@@ -337,9 +356,9 @@
       </ul>
     </section>
 
-    <hr />
+    <hr class="no-print" />
 
-    <footer>
+    <footer class="no-print">
       <a href="mailto:biraj.pub@gmail.com">biraj.pub@gmail.com</a>
       <p>no copyright. feel free to copy this stunning website.</p>
       <p>
@@ -354,10 +373,5 @@
         document.querySelectorAll("details").forEach(($details) => $details.setAttribute("open", "open"));
       });
     </script>
-
-    <script
-      chatbot_id="6601431d1ede6dd83031c420"
-      src="https://app.dev.thinkstack.ai/bot/thinkstackai-loader.min.js"
-    ></script>
   </body>
 </html>
