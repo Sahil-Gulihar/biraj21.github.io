@@ -39,6 +39,10 @@
         margin-left: 16px;
       }
 
+      #skills > ul {
+        text-align: left;
+      }
+
       #projects .project {
         text-align: left;
       }
@@ -80,10 +84,6 @@
     </style>
   </head>
   <body>
-    <small class="print-only">
-      please note this is the print version of my website <a href="https://biraj21.github.io">biraj21.github.io</a>.
-    </small>
-
     <h1 class="no-print">welcome to Biraj's</h1>
     <p class="no-print">
       i'm an average competent software developer. i am a chess amateur (roughly 1700 on
@@ -171,6 +171,9 @@
                     these events and perform some actions.
                   </li>
                   <li>
+                    built sub-users, roles and permissions management system for the app - both backend and frontend.
+                  </li>
+                  <li>
                     created Zapier, Slack and WhatsApp integrations for Thinkstack. also built its API key management
                     system for authentication.
                   </li>
@@ -219,22 +222,22 @@
 
     <hr />
 
+    <div class="print-only">
+      <section id="skills">
+        <h2>skills</h2>
+        <ul>
+          <li><strong>programming languages:</strong> <span>JavaScript (TypeScript), Python, Go, C, Bash</span></li>
+          <li><strong>libraries & frameworks:</strong> <span>React, Node.js, Express.js, Flask</span></li>
+          <li><strong>tools & infra:</strong> <span>Docker, Git, Linux, AWS, GitHub Actions</span></li>
+          <li><strong>database:</strong> <span>MySQL/MariaDB, MongoDB, Redis, SQLite</span></li>
+        </ul>
+      </section>
+
+      <hr />
+    </div>
+
     <section id="projects">
       <h2>projects</h2>
-      <div class="project">
-        <h3>
-          web wanderer
-          <img src="/images/icons/python.svg" alt="Python" />
-        </h3>
-        <p>
-          web wanderer is a multi-threaded web crawler written in Python. it uses
-          <code>concurrent.futures.ThreadPoolExecutor</code> and
-          <a href="https://playwright.dev/" target="_blank">Playwright</a> to crawl and download web pages. it handles
-          dynamically rendered websites, making it capable of extracting content from modern web applications.
-          <br />
-          <a class="project__source-code" href="https://github.com/biraj21/web-wanderer" target="_blank">source code</a>
-        </p>
-      </div>
       <div class="project">
         <h3>
           TCP Server
@@ -250,6 +253,18 @@
       </div>
       <div class="project">
         <h3>
+          focker: linux containers
+          <img src="/images/icons/go.svg" alt="Go" />
+        </h3>
+        <p>
+          Focker is a toy container runtime written in Go. it is based on Ubuntu 22.04 rootfs. this was an attempt to
+          understand how Docker works internally.
+          <br />
+          <a class="project__source-code" href="https://github.com/biraj21/web-wanderer" target="_blank">source code</a>
+        </p>
+      </div>
+      <div class="project">
+        <h3>
           NumPy from scratch in Go
           <img src="/images/icons/go.svg" alt="Go" />
         </h3>
@@ -261,6 +276,20 @@
           <a class="project__source-code" href="https://github.com/biraj21/neural-networks-from-scratch" target="_blank"
             >source code</a
           >
+        </p>
+      </div>
+      <div class="project">
+        <h3>
+          web wanderer
+          <img src="/images/icons/python.svg" alt="Python" />
+        </h3>
+        <p>
+          web wanderer is a multi-threaded web crawler written in Python. it uses
+          <code>concurrent.futures.ThreadPoolExecutor</code> and
+          <a href="https://playwright.dev/" target="_blank">Playwright</a> to crawl and download web pages. it handles
+          dynamically rendered websites, making it capable of extracting content from modern web applications.
+          <br />
+          <a class="project__source-code" href="https://github.com/biraj21/web-wanderer" target="_blank">source code</a>
         </p>
       </div>
       <div class="project">
